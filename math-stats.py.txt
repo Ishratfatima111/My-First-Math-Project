@@ -1,0 +1,27 @@
+# Simple Python Script to Calculate Basic Mathematical Statistics
+# Created as a starter project on GitHub
+
+import statistics
+
+# A list of sample numbers (You can change these numbers to whatever you like!)
+data_points = [12, 15, 12, 18, 22, 15, 12, 30, 25, 12, 19]
+
+print("--- Mathematics Automation Project ---")
+print(f"Our Dataset: {data_points}")
+
+# 1. Calculating the Mean (Average)
+mean_value = statistics.mean(data_points)
+print(f"The Mean of the data is: {mean_value:.2f}")
+
+# 2. Calculating the Median (Middle value)
+median_value = statistics.median(data_points)
+print(f"The Median of the data is: {median_value}")
+
+# 3. Calculating the Mode (Most frequent value)
+try:
+    mode_value = statistics.mode(data_points)
+    print(f"The Mode of the data is: {mode_value}")
+except statistics.StatisticsError:
+    print("There is no single mode in this dataset.")
+
+print("--------------------------------------")
